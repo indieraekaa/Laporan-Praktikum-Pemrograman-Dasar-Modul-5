@@ -1,0 +1,27 @@
+def maksimal(a, b):
+    if a > b:
+        return a
+    return b
+
+def minimal(a, b):
+    if a < b:
+        return a
+    return b
+
+def main() :
+    batas = 0
+    maks = -100000
+    minim = 100000
+    bilangan = int(input())
+    baris = list(map(int, input().split()))
+
+    while batas < bilangan:
+        nilai = baris[batas]
+        maks = maksimal(maks, nilai)
+        minim = minimal(minim, nilai)
+        batas += 1
+
+    print(f"{maks} {minim}")
+
+if __name__ == "__main__":
+    main()
