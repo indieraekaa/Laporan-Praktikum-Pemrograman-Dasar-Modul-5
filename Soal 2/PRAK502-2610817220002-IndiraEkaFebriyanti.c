@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+int hitung(int nilai1, int nilai2) {
+    int selisih = nilai1 - nilai2;
+    if (selisih < 0) {
+        return -selisih;
+    }
+    return selisih;
+}
+
+int mutlak(int angka) {
+    if (angka < 0) {
+        return -angka;
+    }
+    return angka;
+}
+
+int main() {
+    int a,b,c,d;
+
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+    scanf("%d", &d);
+
+    int Hasil = hitung(a, c) + hitung(b, d);
+    printf("%d", mutlak(Hasil));
+
+    return 0;
+}
